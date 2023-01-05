@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #1f2937;
+  letter-spacing: 0.025em;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.25rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+}
+
+h2 {
+    font-size: 1.875rem/* 30px */;
+    line-height: 2.25rem/* 36px */;
+}
+
+li {
+  cursor: pointer;
+}
+
+button {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #9ca3af;
+  --tw-shadow: var(--tw-shadow-colored);
+  border-radius: 0.75rem/* 12px */;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #5651e5;
+  --tw-gradient-to: rgb(86 81 229 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #709dff;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3rem /* 48px */;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 2.25rem/* 36px */;
+    line-height: 2.5rem/* 40px */;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem /* 60px */;
+    line-height: 1;
+  }
 }
