@@ -1,6 +1,7 @@
 import "./App.css";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       </Helmet>
       <main>
         <Navbar />
+        <div className="flex h-[94vh]"></div>
+        <Footer />
       </main>
     </div>
   );
